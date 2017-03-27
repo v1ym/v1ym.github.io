@@ -7,7 +7,6 @@ html, body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0;
-
 }
 
 .header {
@@ -38,44 +37,18 @@ html, body {
 }
 
 .current h1 {
-  padding-top: 60px;
+  padding-top: 100px;
   margin: 0 auto;
   font-weight: 700;
-  letter-spacing: 2px;
+}
+
+.current h2 {
+  padding-top: 50px;
+
 }
 
 .current .container {
   text-align: center;
-}
-
-.current img {
-  width: 95%;
-  padding-bottom: 50px;
-}
-
-.upcoming {
-  text-align: center;
-}
-
-.upcoming .container {
-  border-top: 2px solid gray;
-}
-
-.upcoming h1 {
-  text-align: left;
-}
-
-.grid-cell {
-  float: left;
-  padding: 10px 20px;
-}
-
-.footer {
-  position: relative;
-  top: 50px;
-  height: 50px;
-  background: gray;
-  clear: both;
 }
 
 
