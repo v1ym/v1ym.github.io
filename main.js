@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
-
-
   $("#submit-button").click(function() {
 
     var cat = new Array();
 
     cat[0] = document.forms["quiz"]["login"].value;
+
+    /* leavintg this here just in case, works in Chrome but not IE
+
     cat[1] = document.forms["quiz"]["q1"].value;
     cat[2] = document.forms["quiz"]["q2"].value;
     cat[3] = document.forms["quiz"]["q3"].value;
@@ -23,6 +24,24 @@ $(document).ready(function() {
     cat[14] = document.forms["quiz"]["q14"].value;
     cat[15] = document.forms["quiz"]["q15"].value;
 
+    ...fucking IE  */
+
+    cat[1] = $('input[name="q1"]:checked').val();
+    cat[2] = $('input[name="q2"]:checked').val();
+    cat[3] = $('input[name="q3"]:checked').val();
+    cat[4] = $('input[name="q4"]:checked').val();
+    cat[5] = $('input[name="q5"]:checked').val();
+    cat[6] = $('input[name="q6"]:checked').val();
+    cat[7] = $('input[name="q7"]:checked').val();
+    cat[8] = $('input[name="q8"]:checked').val();
+    cat[9] = $('input[name="q9"]:checked').val();
+    cat[10] = $('input[name="q10"]:checked').val();
+    cat[11] = $('input[name="q11"]:checked').val();
+    cat[12] = $('input[name="q12"]:checked').val();
+    cat[13] = $('input[name="q13"]:checked').val();
+    cat[14] = $('input[name="q14"]:checked').val();
+    cat[15] = $('input[name="q15"]:checked').val();
+
     var totalAnswers = 0;
     for (var i in cat) {
       if (cat[i] === "" || cat[i] === undefined) {
@@ -36,6 +55,8 @@ $(document).ready(function() {
 
     if (totalAnswers === 16) {
       var totalCorrect = 0;
+
+      /*congratulations, you found the answer key!! May God judge you mercifully for cheating */
       if (cat[1] === "c") {
         totalCorrect+=1;
       } else {
@@ -128,15 +149,12 @@ $(document).ready(function() {
       $("label[for='q14b']").addClass("correct");
       $("label[for='q15b']").addClass("correct");
 
-      console.log(cat);
-      console.log(totalAnswers);
-      console.log("You have" + " " + totalCorrect + " " + "answers correct");
       $(".results").css("display", "block");
       $("#score").text(" " + totalCorrect + " ");
       $("#submit-button").css("display", "none");
       /* document.forms[0].submit();  */
 
-    }; /* end if (totalAnswers === 15) */
+    }; /* end if (totalAnswers === 16) */
   }); /* end submit.click */
 
   $("#review").click(function() {
