@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     cat[0] = document.forms["quiz"]["login"].value;
 
-    /* leavintg this here just in case, works in Chrome but not IE
+    /* leaving this here just in case, works in Chrome but not IE
 
     cat[1] = document.forms["quiz"]["q1"].value;
     cat[2] = document.forms["quiz"]["q2"].value;
@@ -150,9 +150,18 @@ $(document).ready(function() {
       $("label[for='q15b']").addClass("correct");
 
       $(".results").css("display", "block");
-      $("#score").text(" " + totalCorrect + " ");
+      $("#score").text("  " + totalCorrect + " ");
+      var percent = Math.floor((totalCorrect / 15) * 100);
+      $("#percentage").text("  " + percent + "%");
       $("#submit-button").css("display", "none");
-      /* document.forms[0].submit();  */
+
+      if (totalCorrect > 10) {
+        $("#score").addClass("correct");
+        $("#percentage").addClass("correct");
+      } else {
+        $("#score").addClass("wrong");
+        $("#percentage").addClass("wrong");
+      }
 
     }; /* end if (totalAnswers === 16) */
   }); /* end submit.click */

@@ -106,7 +106,7 @@ input[type=radio] {
 
 .results {
   position: fixed;
-  height: 200px;
+  height: 250px;
   width: 400px;
   top: 30%;
   left: 50%;
@@ -116,16 +116,32 @@ input[type=radio] {
   text-align: center;
   border: 7px solid #232323;
   border-radius: 5px;
-  background: gray;
+  background: white;
 }
 .results p {
   position: relative;
   top: 25px;
-  margin: 40px 0 50px;
-  color: #414141;
-
+  margin: 40px 0 70px;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
 }
+
+#next-steps {
+    font-size: 14px;
+    top: 0;
+    left: 12.5%;
+    width: 75%;
+    text-align: center;
+    margin: 0 0 20px;
+}
+
 #score {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#percentage {
   font-size: 30px;
   font-weight: bold;
 }
