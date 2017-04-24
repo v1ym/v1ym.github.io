@@ -24,7 +24,7 @@ $(document).ready(function() {
     cat[14] = document.forms["quiz"]["q14"].value;
     cat[15] = document.forms["quiz"]["q15"].value;
 
-    ...fucking IE  */
+    ...godamn IE  */
 
     cat[1] = $('input[name="q1"]:checked').val();
     cat[2] = $('input[name="q2"]:checked').val();
